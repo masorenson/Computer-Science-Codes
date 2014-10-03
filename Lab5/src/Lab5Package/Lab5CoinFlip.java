@@ -22,6 +22,11 @@ public class Lab5CoinFlip {
 		//randomly select result as Heads or Tails, 1 being Heads, 2 being Tails
 	Random generator = new Random();
 	int result = generator.nextInt(2) + 1;
+	String resultStr = "Tails";
+	if (result == 1)
+		resultStr = "Heads";
+	else if (result == 2)
+		resultStr = "Tails";
 	int choiceInt = 0;
 		//Convert player's choice to 1 or 2 so it can compare the result to the choice easily
 	if (choiceStr.equalsIgnoreCase("Heads"))
@@ -36,8 +41,8 @@ public class Lab5CoinFlip {
 		System.out.println("Error, rerun code, make sure to type \"Heads\" or \"Tails\"");
 		//compares choice to result, 
 	if(choiceInt == result)
-		System.out.println("Nice job, " + name + ", you win! The coin flip was " + result + ". You picked " + choiceStr + ".");
+		System.out.println("Nice job, " + name + ", you win! The coin flip was " + resultStr + ". You picked " + choiceStr + ".");
 	else
-		System.out.println("I'm Sorry, " + name + ", you lost. The coin flip was " + result + ". You picked " + choiceStr + ".");
+		System.out.println("I'm Sorry, " + name + ", you lost. The coin flip was " + resultStr + ". You picked " + choiceStr + ".");
 	}
 }
