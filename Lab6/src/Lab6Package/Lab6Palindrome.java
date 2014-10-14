@@ -48,12 +48,12 @@ public class Lab6Palindrome {
 			{
 				if (letterCounter == 0)
 				{
-					character = word.substring(index);
+					character = word.substring(index - 1);
 					backwardsWord = character;
 				}
 				else if (letterCounter > 0)
 				{
-					character = word.substring(index);
+					character = word.substring(index - 1);
 					backwardsWord = backwardsWord + character;
 				}
 				else
