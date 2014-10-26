@@ -17,15 +17,15 @@ public class NumberString
 		String int1Str = num.substring(0, 1);
 		String int2Str = num.substring(2, 3);
 		String int3Str = num.substring(4, 5);
-		
+
 		String first = "";
 		String middle = "";
 		String last = "";
-		
+
 		int int1 = num.charAt(0);
 		int int2 = num.charAt(2);
 		int int3 = num.charAt(4);
-		
+
 		//figures out where int1 is in the order
 		if((int1 > int2) && (int1 > int3))
 			last = int1Str;
@@ -33,7 +33,7 @@ public class NumberString
 			first = int1Str;
 		else
 			middle = int1Str;
-			
+
 		//figures out where int2 is in the order
 		if((int2 > int1) && (int2 > int3))
 			last = int2Str;
@@ -41,7 +41,7 @@ public class NumberString
 			first = int2Str;
 		else
 			middle = int2Str;
-			
+
 		//figures out where int3 is in the order
 		if((int3 > int2) && (int3 > int1))
 			last = int3Str;
@@ -49,11 +49,8 @@ public class NumberString
 			first = int3Str;
 		else
 			middle = int3Str;
-			
+
 		//prints numbers in correct order
-		String firstStr = "" + first;
-		String middleStr = "" + middle;
-		String lastStr = "" + last;
 		String numStr = first + " " + middle + " " + last;
 		System.out.println(numStr);
 	}
